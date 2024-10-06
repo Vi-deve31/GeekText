@@ -10,16 +10,15 @@ import com.example.GeekText.model.ShoppingCart;
 
 @Repository
 public interface ShoppingCartRepo extends MongoRepository<ShoppingCart, String> {
-    
     //find a shopping cart by the users ID
     Optional<ShoppingCart> findByUserId(String userId);
 
     //delete a shopping cart by users ID
-    void deledeleteByUserId(String userId);
+    void deleteByUserId(String userId);
 
     //checks if cart exists for specific userID
-    boolean existexistsByUserId(String userId);
+    boolean existByUserId(String userId);
 
     //counts number of items in users cart
-    long countcountByUserId(String userId);
+    long countByUserId(String userId);
 }
