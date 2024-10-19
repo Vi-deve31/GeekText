@@ -1,21 +1,22 @@
 package com.example.GeekText.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "shopping_carts")
 public class ShoppingCart {
     @Id
     private String id;
     private String userId;
+
+    @DBRef
     private List<Book> books;
 
-    //constructors
-    public ShoppingCart() {
-        this.books = new ArrayList<>();
-    }
+        
 
     public ShoppingCart(String userId) {
         this.userId = userId;
