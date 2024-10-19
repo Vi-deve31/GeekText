@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "shopping_carts")
@@ -13,7 +12,7 @@ public class ShoppingCart {
     private String id;
     private String userId;
 
-    @DBRef
+ 
     private List<Book> books;
 
         
@@ -21,6 +20,10 @@ public class ShoppingCart {
     public ShoppingCart(String userId) {
         this.userId = userId;
         this.books = new ArrayList<>();
+    }
+
+    public void addBook (Book book) {
+        this.books.add(book);
     }
 
     //getters and setters
@@ -48,13 +51,8 @@ public class ShoppingCart {
         this.books = books; 
     }
 
-    //helper methods
-    public void addBook(Book book) {
-        this.books.add(book);
-    }
-    
-    public void removeBook(Book book) {
-        this.books.remove(book);
+    public boolean removeBook(Book book) {
+        return this.books.remove(book);
     }
 
     public double getSubtotal() {

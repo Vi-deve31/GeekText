@@ -21,7 +21,7 @@ db.getCollection('shopping_carts').insertMany([
     'userId': 'user001',
     'books': [
       {
-        'bookId': 1,
+        '_id': '67032d5e7d9131561dfedf00',
         'title': 'Binti',
         'author': 'Nnedi Okorafor',
         'price': 9.99
@@ -34,13 +34,13 @@ db.getCollection('shopping_carts').insertMany([
     'userId': 'user002',
     'books': [
       {
-        'bookId': 2,
+        '_id': '67032d5e7d9131561dfedf01',
         'title': 'Binti: Home',
         'author': 'Nnedi Okorafor',
         'price': 9.99
       },
       {
-        'bookId': 2,
+        '_id': '67032d5e7d9131561dfedf01',
         'title': 'Binti: Home',
         'author': 'Nnedi Okorafor',
         'price': 11.99
@@ -53,13 +53,13 @@ db.getCollection('shopping_carts').insertMany([
     'userId': 'user003',
     'books': [
       {
-        'bookId': 3,
+        '_id': '67032d5e7d9131561dfedf02',
         'title': 'Binti: The Night Masquerade',
         'author': 'Nnedi Okorafor',
         'price': 14.99
       },
       {
-        'bookId': 3,
+        '_id': '67032d5e7d9131561dfedf02',
         'title': 'Binti: The Night Masquerade',
         'author': 'Nnedi Okorafor',
         'price': 14.99

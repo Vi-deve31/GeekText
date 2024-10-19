@@ -7,5 +7,5 @@ import com.example.GeekText.model.Book;
 
 
 public interface BookRepo extends MongoRepository<Book, String> {
-    
+      
 }

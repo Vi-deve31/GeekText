@@ -17,10 +17,11 @@ public class BookController {
     @Autowired
     private BookRepo bookRepo;
 
+    //adds new book
     @PostMapping("/add")
     public Book addBook(@RequestBody Book book) {
 
-        return bookRepo.save(book);
+        return bookRepo.save(book); //saves to db
     }
     
 }

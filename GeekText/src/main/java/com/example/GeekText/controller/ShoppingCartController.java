@@ -18,78 +18,73 @@ import com.example.GeekText.repository.BookRepo;
 import com.example.GeekText.repository.ShoppingCartRepo;
 
 
-
-
 @RestController
 @RequestMapping("api/shoppingcart")
 public class ShoppingCartController {
 
-@Autowired
-private ShoppingCartRepo shoppingCartRepo;
 
-@Autowired
-private BookRepo bookRepo;
+    @Autowired
+    private ShoppingCartRepo shoppingCartRepo;
 
-
+    @Autowired
+    private BookRepo bookRepo;
 
 //get subtotal
-@GetMapping("/{userId}/subtotal")
-public ResponseEntity<Double> getSubtotal(@PathVariable String userId) {
-    Optional<ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
-    if (cartOpt.isPresent()) {
-        return ResponseEntity.ok(cartOpt.get().getSubtotal());
-    } else {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-        .body(0.0);
-    }
-}
-
-//adding book in the shopping cart
-@PostMapping("/{userId}/add/{bookId}")
-public ResponseEntity<ShoppingCart> addBooktoCart(@PathVariable String userId, @PathVariable String bookId) {
-    Optional<ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
-    Optional<Book> bookOpt = bookRepo.findById(bookId);
-
-    if (!bookOpt.isPresent()) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); //404
+    @GetMapping("/{userId}/subtotal")
+    public ResponseEntity<Double> getSubtotal(@PathVariable String userId) {
+        Optional<ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
+        if (cartOpt.isPresent()) {
+            return ResponseEntity.ok(cartOpt.get().getSubtotal());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(0.0);
+        }
     }
 
-    //if shopping cart exists
-    ShoppingCart cart = shoppingCartRepo.findByUserId(userId).orElseGet(() -> new ShoppingCart(userId));
-    cart.addBook(bookOpt.get());
-    shoppingCartRepo.save(cart);
+//adding book in the shopping cart with objectid
+    @PostMapping("/{userId}/add/{bookId}")
+    public ShoppingCart addBookToCart (@PathVariable String userId, @PathVariable String bookId) {
+        Optional <ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
+        Optional <Book> bookOpt = bookRepo.findById(bookId); // _id of book
 
-    return ResponseEntity.status(HttpStatus.CREATED).body(cart);
+        if (bookOpt.isPresent()) {
+            Book book = bookOpt.get();
+            ShoppingCart cart = cartOpt.orElseGet(() -> new ShoppingCart(userId));
+
+            cart.addBook(book);
+            return shoppingCartRepo.save(cart);
+        } else {
+            throw new RuntimeException("Book not found");
+        }
     }
+
 
 //get list of books in shopping cart
-@GetMapping("/{userId}/books")
-public ResponseEntity<?> getBooksInShoppingCart(@PathVariable String userId) {
-    Optional <ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
-    if (cartOpt.isPresent()) {
-        return ResponseEntity.ok(cartOpt.get());
-    } else {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-        .body("Cart doesn't exist for user: " + userId); 
+    @GetMapping("/{userId}/books")
+    public ResponseEntity<?> getBooksInShoppingCart(@PathVariable String userId) {
+        Optional<ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
+        if (cartOpt.isPresent()) {
+            return ResponseEntity.ok(cartOpt.get());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Cart doesn't exist for user: " + userId);
+        }
     }
-}
-
 
 //remove book from the shopping cart
-@DeleteMapping("/{userId}/remove/{bookId}")
-public ResponseEntity<?> removeBookFromShoppingCart(@PathVariable String userId, @PathVariable String bookId) {
-    Optional<ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
-    Optional<Book> bookOpt = bookRepo.findById(bookId);
+    @DeleteMapping("/{userId}/remove/{bookId}")
+    public ResponseEntity<?> removeBookFromShoppingCart(@PathVariable String userId, @PathVariable String bookId) {
+        Optional<ShoppingCart> cartOpt = shoppingCartRepo.findByUserId(userId);
+        Optional<Book> bookOpt = bookRepo.findById(bookId);
 
-    if (cartOpt.isPresent() && bookOpt.isPresent()) {
-        ShoppingCart cart = cartOpt.get();
-        cart.removeBook(bookOpt.get());
-        shoppingCartRepo.save(cart);
-        return ResponseEntity.ok(cart);
-    } else {
-       return ResponseEntity.status(HttpStatus.NOT_FOUND)
-       .body("Either Book or Shopping Cart not found.");
+        if (cartOpt.isPresent() && bookOpt.isPresent()) {
+            ShoppingCart cart = cartOpt.get();
+            cart.removeBook(bookOpt.get());
+            shoppingCartRepo.save(cart);
+            return ResponseEntity.ok(cart);
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body("book or shopping cart not found");
+            }
+        }
     }
-}
-}
-

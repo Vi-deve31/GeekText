@@ -13,18 +13,16 @@ public class Book {
    private String title;
    private String author;
    private double price;
-   private String isbn;
 
 
 
     public Book() {}
     
-    public Book(String bookId, String title, String author, double price, String isbn) {
+    public Book(String bookId, String title, String author, double price) {
         this.bookId = bookId;
         this.title = title;
         this.author = author;
         this.price = price;
-        this.isbn = isbn;
     
 }
 
@@ -61,22 +59,13 @@ public class Book {
         this.price = price;
     }
 
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn (String isbn) {
-        this.isbn = isbn; 
-    }
-
     @Override
     public String toString() {
         return "Book{" + 
         "id='" + bookId + '\'' + 
         ", title='" + title + '\'' + 
         ", author='" + author  + '\'' +
-        ", price=" + price + 
-        ", isbn='" + isbn + '\'' + 
+        ", price=" + price +
         '}';
 
     }
