@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="368a6068-ab5a-48cf-b9fd-e9391dda48f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="368a6068-ab5a-48cf-b9fd-e9391dda48f3" name="Changes" comment="Sprint 4 Updates">
+      <change afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Controller/BookReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Service/BookReviewService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/GeekTextApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/GeekTextApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeekText/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GeekText/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Model/BookReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Model/BookReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Repository/BookReviewRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Repository/BookReviewRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,29 @@
       <workItem from="1728092837182" duration="9662000" />
       <workItem from="1728244566699" duration="1495000" />
       <workItem from="1728427838561" duration="7307000" />
+      <workItem from="1729630507084" duration="7374000" />
+      <workItem from="1729641727859" duration="8653000" />
+      <workItem from="1730062847798" duration="2448000" />
+      <workItem from="1730344960041" duration="924000" />
+      <workItem from="1730830329820" duration="8623000" />
     </task>
+    <task id="LOCAL-00001" summary="Sprint 1 - Example Project">
+      <option name="closed" value="true" />
+      <created>1729630816989</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729630816989</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Sprint 3 Updates">
+      <option name="closed" value="true" />
+      <created>1729650377090</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729650377090</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,5 +150,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sprint 1 - Example Project" />
+    <MESSAGE value="Sprint 3 Updates" />
+    <MESSAGE value="Sprint 4 Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint 4 Updates" />
   </component>
 </project>
