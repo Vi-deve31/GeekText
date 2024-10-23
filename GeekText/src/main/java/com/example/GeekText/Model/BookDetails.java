@@ -13,7 +13,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 public class BookDetails {
     @Id
-    private Integer id;
     private Long isbn;
     private String name;
     private String description;

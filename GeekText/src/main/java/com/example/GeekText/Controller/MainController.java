@@ -18,9 +18,9 @@ public class MainController {
     }
 
 
-    @GetMapping("/getBook/{id}")
-    public BookDetails getBook(@PathVariable Integer id) {
-        return bookDetailsRepo.findById(id).orElse(null);
+    @GetMapping("/getBook/{isbn}")
+    public BookDetails getBook(@PathVariable Long isbn) {
+        return bookDetailsRepo.findByIsbn(isbn).orElse(null);
 
     }
 
