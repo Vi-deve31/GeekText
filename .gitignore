@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 
 .vscode
+books.mongodb.js 
+shopping-cart.mongodb.js 
+tempCodeRunnerFile.js 
