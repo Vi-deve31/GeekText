@@ -7,24 +7,18 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-
-
 @Document
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class BookDetails {
+public class AuthorDetails {
     @Id
-    private Long isbn;
-    private String name;
-    private String description;
-    private Integer price;
-    private String author;
-    private String genre;
+    private Integer id;
+    private String firstName;
+    private String lastName;
+    private String biography;
     private String publisher;
-    private Integer yearPublished;
-    private Long copiesSold;
 
 }
 
