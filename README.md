@@ -33,6 +33,6 @@ Before you begin, ensure these requirements are satisfied:
 ---
 
 # Licenses and Copyright
-This project is under Apache-2.0 License
+* This project is under the Apache-2.0 License
 ---
 
