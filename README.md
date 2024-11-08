@@ -6,11 +6,11 @@ The project is structured as follows:
 * `src/main/java/com/example/GeekText`: contains the Java code source for the application
 
 # Features
-* Book browsing: Users will have a simple and enjoyable way to discover new books and Authors
-* Profile management: Users can create and maintain their profiles
-* Shopping cart: Users can manage items in a shopping cart for immediate or future purchase
-* Book details: Users can see informative and enticing details about a book
-* Book rating and commenting: Users can rate AND comment on books they've purchased to help others
+* Book Browsing: Users will have a simple and enjoyable way to discover new books and Authors
+* Profile Management: Users can create and maintain their profiles
+* Shopping Cart: Users can manage items in a shopping cart for immediate or future purchase
+* Book Details: Users can see informative and enticing details about a book
+* Book Rating and Commenting: Users can rate AND comment on books they've purchased to help others
 * Wishlist Management: Users can create and have 3 different wishlists
 
 # Used Technologies 
