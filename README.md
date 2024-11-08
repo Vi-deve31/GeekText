@@ -3,11 +3,11 @@ GeekText is a Spring Boot application that supports an online web application bo
 
 # Project Structure
 The project is structured as follows: 
-Markup : - src/main/java/com/example/GeekText
+* src/main/java/com/example/GeekText
 
 # Prerequisites
 Before you begin, ensure these requirements are satisfied: 
-Markup : - Java Development Kit (JDK) 11 or later
-Markup : - Maven (for building and managing dependencies)
-Markup : - MongoDB cluster created and connected in applications.properties
+* Java Development Kit (JDK) 11 or later
+* Maven (for building and managing dependencies)
+* MongoDB cluster created and connected in applications.properties
 
