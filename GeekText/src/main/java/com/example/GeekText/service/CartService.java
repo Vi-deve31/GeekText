@@ -18,13 +18,13 @@ import com.example.GeekText.repository.ShoppingCartRepo;
 public class CartService {
 
     @Autowired
-    private ShoppingCartRepo cartRepo;
+    private ShoppingCartRepo cartRepo; //repo for cart operations
 
     @Autowired
-    private MongoTemplate mongoTemplate;
+    private MongoTemplate mongoTemplate; //for custom mongo queries
 
 
-
+    //finds the carts for each user
     public double getSubtotal(String userId) {
         List<ShoppingCart> userCarts = cartRepo.findByUserId(userId);
         if (userCarts.isEmpty()) {
@@ -33,17 +33,19 @@ public class CartService {
         ShoppingCart cart = userCarts.get(0);
         return cart.getBooks().stream()
         .mapToDouble(book -> book.getPrice())
-        .sum();
+        .sum(); //java streams to sum up all book prices in the cart
     }
 
+    //retrieves all books in the user cart
         public List<ShoppingCart.BooksInCart> getBooks(String userId) {
             List<ShoppingCart> userCarts = cartRepo.findByUserId(userId);
             if (userCarts.isEmpty()) {
                 return new ArrayList<>();
             }
-            return userCarts.get(0).getBooks();
+            return userCarts.get(0).getBooks(); //empty list if no cart exists
         }
 
+    //finds the book in the db 
         public void addBook(String userId, String bookId) {
             Query query = new Query();
             query.addCriteria(Criteria.where("bookId").is(bookId));
@@ -52,10 +54,10 @@ public class CartService {
             if (book == null) {
                 throw new RuntimeException("Book not found with ID: " + userId);  
             }
-
+    //create or get the cart for the user
             List<ShoppingCart> userCarts = cartRepo.findByUserId(userId);
             ShoppingCart cart;
-            
+    //create new cart if none exists        
             if (userCarts.isEmpty()) {
                 cart = new ShoppingCart();
                 cart.setUserId(userId);
@@ -66,7 +68,7 @@ public class CartService {
                 cart = userCarts.get(0);
             }
 
-            //new book entry
+            //new book entry 
             ShoppingCart.BooksInCart cartBook = new ShoppingCart.BooksInCart();
             cartBook.setBookId(book.getBookId());
             cartBook.setTitle(book.getTitle());

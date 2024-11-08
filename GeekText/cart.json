@@ -40,5 +40,19 @@
     ],
     "createdAt": "2024-11-06T12:00:00Z", 
     "updatedAt": "2024-11-06T12:00:00Z"   
+},
+{
+    "ShoppingCartId": "Cart-4",
+    "userId": "user004",
+    "books": [
+        {
+            "bookId": "Dune-1",
+            "title": "Dune",
+            "author": "Frank Herbert",
+            "price": 14.99
+        }
+    ],
+    "createdAt": "2024-11-06T12:00:00Z", 
+    "updatedAt": "2024-11-06T12:00:00Z"   
 }
 ]
