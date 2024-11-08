@@ -11,47 +11,40 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.GeekText.model.Book;
+import com.example.GeekText.model.ShoppingCart;
 import com.example.GeekText.service.CartService;
 
 
-
-
 @RestController
-@RequestMapping("/api/shoppingcart")
+@RequestMapping("api/shoppingcart")
 public class ShoppingCartController {
-
 
     @Autowired
     private CartService cartService;
 
+    //retrieve books http://localhost:8080/api/shoppingcart/user001
+    @GetMapping("/{userId}")
+    public ResponseEntity<List<ShoppingCart.BooksInCart>> getBooks(@PathVariable String userId) {//@PathVariable String bookId) 
+        return ResponseEntity.ok(cartService.getBooks(userId));
+    }
 
-
-//get subtotal
-    @GetMapping("/{userId}/subtotal")
-    public ResponseEntity <Double> getSubtotal(@PathVariable String userId) {
+    // retrieve subtotal  http://localhost:8080/api/shoppingcart/subtotal/user001
+    @GetMapping("subtotal/{userId}")
+    public ResponseEntity<Double> getSubtotal(@PathVariable String userId) {
         return ResponseEntity.ok(cartService.getSubtotal(userId));
     }
 
-//adding book in the shopping cart with objectid
-    @PostMapping("/{userId}/add/{bookId}")
-    public ResponseEntity<Void> addBookToCart(@PathVariable String userId, @PathVariable String bookId) {
-       cartService.addBookToCart(userId, bookId); 
-       return ResponseEntity.ok().build();
-    }
-    
-
-//get list of books in shopping cart
-    @GetMapping("/{userId}/books")
-    public ResponseEntity<List<Book>> getBooksInCart(@PathVariable String userId) {
-        return ResponseEntity.ok(cartService.getBooksInShoppingCart(userId));
-    }
-
-//remove book from the shopping cart
-    @DeleteMapping("/{userId}/remove/{bookId}")
-    public ResponseEntity<Void> removeBookFromCart(@PathVariable String userId, @PathVariable String bookId) {
-        cartService.removeBookFromShoppingCart(userId, bookId);
+    //add a book to a shopping cart http://localhost:8080/api/shoppingcart/user001/book/Binti-1
+    @PostMapping("/{userId}/book/{bookId}")
+    public ResponseEntity<Void> addBook (@PathVariable String userId, @PathVariable String bookId) {
+        cartService.addBook(userId, bookId);
         return ResponseEntity.ok().build();
     }
-        
+
+    //delete a book from the shopping cart http://localhost:8080/api/shoppingcart/user001/book/Binti-1
+    @DeleteMapping("/{userId}/book/{bookId}")
+    public ResponseEntity<Void> removeBook(@PathVariable String userId, String bookId) {
+        cartService.removeBook(userId, bookId);
+        return ResponseEntity.ok().build();
     }
+}

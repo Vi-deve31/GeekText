@@ -6,58 +6,81 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-@Document(collection = "shopping_carts")
+@Document (collection = "cart") 
 public class ShoppingCart {
     @Id
-    private String id;
+    private String shoppingCartId;
     private String userId;
+    private List<BooksInCart> books = new ArrayList<>();
+    private String createdAt;
+    private String updatedAt;
 
- 
-    private List<Book> books;
+    //class for the books in the cart
+    public static class BooksInCart {
+        private String bookId;
+        private String title;
+        private String author;
+        private double price;
 
-        
-
-    public ShoppingCart(String userId) {
-        this.userId = userId;
-        this.books = new ArrayList<>();
+        public String getBookId(){
+            return bookId;
+        }
+        public void setBookId(String bookId) {
+            this.bookId = bookId;
+        }
+        public String getTitle() {
+            return title;
+        }
+        public void setTitle(String title) {
+            this.title = title;
+        }
+        public String getAuthor(){
+            return author;
+        }
+        public void setAuthor (String author) {
+            this.author = author;
+        }
+        public double getPrice(){
+            return price;
+        }
+        public void setPrice (double price) {
+            this.price = price;
+        }
     }
 
-    public void addBook (Book book) {
-        this.books.add(book);
-    }
 
-    //getters and setters
-    public String getId() {
-        return id;
+    public String getShoppingCartId () {
+        return shoppingCartId;
     }
+    public void setShoppingCartId (String shoppingCartId) {
+        this.shoppingCartId = shoppingCartId; 
+    } 
 
-    public void setId(String id) {
-        this.id = id; 
-    }
-
-    public String getUserId() {
+    public String getUserId () {
         return userId;
     }
 
     public void setUserId (String userId) {
-        this.userId = userId;
-    }
+        this.userId = userId; 
+    } 
 
-    public List<Book> getBooks() {
+    public List<BooksInCart> getBooks() {
         return books;
     }
-
-    public void setBooks(List<Book>books) {
-        this.books = books; 
+    public void setBooks (List<BooksInCart> books) {
+        this.books = books;
     }
 
-    public boolean removeBook(Book book) {
-        return this.books.remove(book);
+    public String getCreatedAt() {
+        return createdAt;
     }
-
-    public double getSubtotal() {
-        return books.stream().mapToDouble(Book::getPrice).sum();
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
-
+    public String getUpdatedAt(){
+        return updatedAt;
+    }
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
