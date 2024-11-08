@@ -3,7 +3,7 @@ GeekText is a Spring Boot application that supports an online web application bo
 
 # Project Structure
 The project is structured as follows: 
-* src/main/java/com/example/GeekText
+* 'src/main/java/com/example/GeekText' : contains the Java code source for the application
 
 # Prerequisites
 Before you begin, ensure these requirements are satisfied: 
