@@ -1,5 +1,5 @@
 # GeekText
-GeekText is a Spring Boot application that supports an online web application bookstore that targets a particular niche in technology.
+GeekText is a RESTFul Spring Boot application that supports an online web application bookstore that targets a particular niche in technology.
 
 # Project Structure
 The project is structured as follows: 
