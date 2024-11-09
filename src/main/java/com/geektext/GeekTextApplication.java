@@ -1,13 +1,13 @@
-//package com.geektext;
-//
-//import org.springframework.boot.SpringApplication;
-//import org.springframework.boot.autoconfigure.SpringBootApplication;
-//
-//@SpringBootApplication
-//public class GeekTextApplication {
-//
-//    public static void main(String[] args) {
-//        SpringApplication.run(GeekTextApplication.class, args);
-//    }
-//}
+package com.geektext;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GeekTextApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(GeekTextApplication.class, args);
+    }
+}
 
