@@ -7,8 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.util.List;
 
-
-
 /* This interface (not a class) links our student class with our MongoDB compass.
  with the help of the repo we will be able to insert/find values from our mongodb compass.
  Interfaces allow for flexibility.
