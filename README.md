@@ -14,7 +14,7 @@ The project is structured as follows:
 * Wishlist Management: Users can create and have 3 different wishlists
 ---
 
-# Used Technologies
+# Technologies Used
 * Java 17
 * Spring Boot
 * Maven
