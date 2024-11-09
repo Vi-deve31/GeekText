@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="368a6068-ab5a-48cf-b9fd-e9391dda48f3" name="Changes" comment="Sprint 4 Updates">
-      <change afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Controller/BookReviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Service/BookReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Model/BookReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Model/BookReview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Repository/BookReviewRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeekText/src/main/java/com/example/GeekText/Repository/BookReviewRepo.java" afterDir="false" />
-    </list>
+    <list default="true" id="368a6068-ab5a-48cf-b9fd-e9391dda48f3" name="Changes" comment="Sprint 4 Updates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +97,7 @@
       <workItem from="1729641727859" duration="8653000" />
       <workItem from="1730062847798" duration="2448000" />
       <workItem from="1730344960041" duration="924000" />
-      <workItem from="1730830329820" duration="8623000" />
+      <workItem from="1730830329820" duration="9400000" />
     </task>
     <task id="LOCAL-00001" summary="Sprint 1 - Example Project">
       <option name="closed" value="true" />
@@ -122,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729650377090</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sprint 4 Updates">
+      <option name="closed" value="true" />
+      <created>1730867275796</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730867275796</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
