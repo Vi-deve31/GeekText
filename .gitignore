@@ -25,4 +25,18 @@ replay_pid*
 
 .vscode
 
+# Ignore IntelliJ IDEA folder and XML files
 .idea/
+*.xml
+
+books.mongodb.js 
+shopping-cart.mongodb.js 
+tempCodeRunnerFile.js 
+books.json 
+cart.json
+books.json
+books.json
+books.json
+books.json
+books.json
+cart.json
