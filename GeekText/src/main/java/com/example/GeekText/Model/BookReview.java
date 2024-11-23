@@ -26,5 +26,4 @@ public class BookReview { // model class has our keys in the mongodb
     public boolean isPurchaseStatus() {
         return purchaseStatus;
     }
-
 }
