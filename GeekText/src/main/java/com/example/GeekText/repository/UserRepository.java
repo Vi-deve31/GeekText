@@ -1,4 +1,4 @@
-package com.example.GeekText.repository;
+package com.example.GeekText.Repository;
 
 public class UserRepository {
 }

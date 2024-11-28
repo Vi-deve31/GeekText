@@ -1,4 +1,4 @@
-package com.example.GeekText.model;
+package com.example.GeekText.Model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

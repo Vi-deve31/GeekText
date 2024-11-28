@@ -1,4 +1,9 @@
-package com.example.GeekText.repository;
+package com.example.GeekText.Repository;
 
-public class BookRepository {
+import com.example.GeekText.Model.Book;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface BookRepository extends MongoRepository<Book, String> {
 }

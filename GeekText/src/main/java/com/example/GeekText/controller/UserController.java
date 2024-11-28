@@ -1,4 +1,4 @@
-package com.example.GeekText.controller;
+package com.example.GeekText.Controller;
 
 public class UserController {
 }

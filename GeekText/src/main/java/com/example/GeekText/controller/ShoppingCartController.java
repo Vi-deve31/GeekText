@@ -1,4 +1,4 @@
-package com.example.GeekText.controller;
+package com.example.GeekText.Controller;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.GeekText.model.ShoppingCart;
-import com.example.GeekText.service.CartService;
+import com.example.GeekText.Service.CartService;
 
 
 @RestController

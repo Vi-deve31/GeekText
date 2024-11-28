@@ -1,4 +1,4 @@
-package com.example.GeekText.service;
+package com.example.GeekText.Service;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -10,9 +10,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.example.GeekText.model.Book;
+import com.example.GeekText.Model.Book;
 import com.example.GeekText.model.ShoppingCart;
-import com.example.GeekText.repository.ShoppingCartRepo;
+import com.example.GeekText.Repository.ShoppingCartRepo;
 
 @Service
 public class CartService {

@@ -1,4 +1,4 @@
-package com.example.GeekText.service;
+package com.example.GeekText.Service;
 
 public class UserService {
 }
